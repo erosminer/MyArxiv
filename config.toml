@@ -4,28 +4,23 @@ cache_url = "https://erosminer.github.io/MyArxiv/cache.json"
 
 [[sources]]
 limit = 150
-category = "cs.CL"
-title = "Computation and Language"
+category = "q-bio.GN"
+title = "Genomics"
 
 [[sources]]
 limit = 150
-category = "cs.CV"
-title = "Computer Vision and Pattern Recognition"
+category = "q-bio.MN"
+title = "Molecular Networks"
 
 [[sources]]
 limit = 150
-category = "cs.IR"
-title = "Information Retrieval"
+category = "q-bio.PE"
+title = "Populations and Evolution"
 
 [[sources]]
 limit = 150
-category = "cs.LG"
-title = "Machine Learning"
-
-[[sources]]
-limit = 150
-category = "cs.MM"
-title = "Multimedia"
+category = "q-bio.QM"
+title = "Quantitative Methods"
 
 [scripts]
 highlight_title = "scripts/highlight_title.rhai"
