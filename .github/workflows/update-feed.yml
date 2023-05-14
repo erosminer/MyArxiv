@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
+        with:
+          repository: 'erosminer/MyArxiv'
+          ref: 'main'
 
       - name: Download ArxivFeed
         env:
