@@ -49,7 +49,7 @@ jobs:
         run: ./arxivfeed
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: erosminer/github-pages-deploy-action@4.1.1
         with:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
