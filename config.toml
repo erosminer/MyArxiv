@@ -1,4 +1,4 @@
-site_title = "MyArxiv"
+site_title = "BioArxiv"
 limit_days = 7
 cache_url = "https://erosminer.github.io/MyArxiv/cache.json"
 
