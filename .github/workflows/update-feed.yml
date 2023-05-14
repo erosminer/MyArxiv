@@ -16,12 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
-        uses: erosminer/checkout
-        with:
-          repository: 'erosminer/MyArxiv'
-          ref: 'main'
-
+      - uses: actions/checkout@v2
       - name: Download ArxivFeed
         env:
           GITHUB_PAT: ${{ github.token }}
@@ -44,13 +39,11 @@ jobs:
               "$(cat asset.url)"
           tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
           chmod +x arxivfeed
-
       - name: Build rss
         run: ./arxivfeed
-
       - name: Deploy to GitHub Pages
-        uses: erosminer/github-pages-deploy-action
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: ./target
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target
+          force_orphan: true
